@@ -105,7 +105,80 @@ function convertToF(celsius) {
 }
 console.log(convertToF(30) == 86); //expected true
 
-//Above this line already pushed to gitHub 'https://github.com/bmanandhar/fcc_javascript_ex/blob/master/fcc.js'
+//example
+var firstName = 'Alan';
+var lastName = 'Turing';
+
+//Only change code below this line
+var myFirstName = "Elizabeth";
+var myLastName = "Green";
+
+var myStr = "I'm a \"double quoted\" string inside \"double quotes\".";// change this line
+var myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
+var myStr = "FirstLine\n\\SecondLine\\\rThirdLine";// Change this line
+//Example
+var ourStr = "I come first. " + "I come second.";
+var myStr = "This is the start. " + "This is the end.";
+
+var ourStr = "I come first. ";
+ourStr += "I come second.";
+
+var myStr = "This is the first sentence.";
+myStr += "This is the second sentence.";
+
+var ourName = "Free Code Camp";
+var ourStr = "Hello, our name is " + ourName + ", how are you?";
+
+var myName = "Jack";
+var myStr = "I am " + myName + ", a good programmer.";
+
+var anAdjective = "awesome!";
+ourStr += anAdjective;
+
+var someAdjective = "good";
+var myStr = "Learning to code is ";
+myStr += someAdjective;
+
+var firstNameLength = 0;
+var firstName = "Ada";
+firstNameLength = firstName.length;
+
+var lastNameLength = 0;
+var lastName = "Lovelace";
+lastNameLength = lastName.length;
+
+var firstLetterOfFirstName = "";
+var firstName = "Ada";
+firstLetterOfFirstName = firstName[0];
+
+var firstLetterOfLastName = "";
+var lastName = "Lovelace";
+firstLetterOfLastName = lastName[0];
+
+var newStr = myStr.slice(1);
+
+myStr = 'H' + newStr;
+
+var firstName = "Ada";
+var secondLetterOfFirstName = firstName[1];
+
+var lastName = "Lovelace";
+var thirdLetterOfLastName = lastName[2];
+
+var firstName = "Ada";
+var lastLetterOfFirstName = firstName[firstName.length - 1];
+
+var lastName = "Lovelace";
+var lastLetterOfFirstName = lastName[lastName.length - 1];
+
+var firstName = "Ada";
+var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];
+
+var lastName = "Lovelace";
+var secondToLastLetterOfLastName = lastName[lastName.length - 2];
+
+//Above this line pushed to gitHub line #243 
+
 
 
 
