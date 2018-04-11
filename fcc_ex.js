@@ -300,8 +300,179 @@ function processArg(num) {
     return (num + 3)/5;
 }
 processed = processArg(7);// var processed now equals 2(=(7+3)/5), originally it was 0
-
-
+//
+function nextInLine(arr, item) {
+    arr.push(item);
+    return arr.shift();
+}
+console.log(nextInLine([0, 2, 3], 9));
+//returns 0, method 'shift', 9 is added to the end of arr though
+//
+var testArr = [1, 2, 3, 4, 5];
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+//
+function confirmEnding(str, target) {
+  return str.substr(-target.length) === target;
+}
+console.log(confirmEnding('Bastian', 'n'));
+//negative value of target.length gets the substring of str that is equal to target length but to the end of str.
+//
+function welcomeToBooleans() {
+    return true;
+}
+//
+function ourTrueOrFalse(isItTrue) {
+    if (isItTrue) {
+        return "Yes, it's true";
+    }
+    return "No, it's false";
+}
+//
+function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+        return "Yes, that was true";
+    }
+    return "No, that was false";
+}
+trueOrFalse(true);
+//
+function testEqual(val) {
+    if (val == 12) {
+        return "Equal";
+    }
+    return "Not Equal";
+}
+console.log(testEqual(10))
+//
+function testStrict(val) {
+    if (val === 7) {
+        return "Equal";
+    }
+    return "Not Equal";
+}
+console.log(testStrict(10));
+//
+function testNotEqual(val) {
+    if (val != 99) {
+        return "Not Equal";
+    }
+    return "Equal";
+}
+console.log(testNotEqual(10));
+//
+function testStrictNotEqual(val) {
+    if (val !== 17) {
+        return "Not Equal";
+    }
+    return "Equal";
+}
+console.log(testStrictNotEqual(10));
+//
+function testGreaterThan(val) {
+    if (val > 100) {
+        return "Over 100";
+    }
+    return "10 or Under";
+}
+console.log(testGreaterThan(10));
+//
+function testGreaterOrEqual(val) {
+    if (val >= 20) {
+        return "20 or Over";
+    }
+    if (val >= 10) {
+        return "10 or Over";
+    }
+    return "9 or Under";
+}
+console.log(testGreaterOrEqual(10));
+//
+function testLessThan(val) {
+    if (val < 25) {
+        return "Under 25";
+    }
+    if (val < 55) {
+        return "Under 55";
+    }
+    return "55 or Over";
+}
+console.log(testLessThan(10));
+//
+function testLessOrEqual(val) {
+    if (val <= 12) {
+        return "Smaller Than or Equal to 12";
+    }
+    if (val <= 24) {
+        return "Smaller Than or Equal to 24";
+    }
+    return "25 or More";
+}
+console.log(testLessOrEqual(10))
+//
+function testLogicalAnd(val) {
+    if (val <= 50 && val >= 25) {
+        return "Yes";
+    }
+    return "No";
+}
+console.log(testLogicalAnd(10));
+//
+function testLogicalOr(val) {
+    if (val < 10 || val > 20) {
+        return "Outside";
+    }
+    return "Inside";
+}
+console.log(testLogicalOr(15));
+//
+function testElse(val) {
+    var result;
+    if (val > 5) {
+        result = "Bigger than 5";
+    }
+    else result = "5 or Smaller";
+    return result;
+}
+console.log(testElse(4));
+//
+function testElseIf(val) {
+    if (val > 10) {
+        return "Greater than 10";
+    }
+    else if (val < 5) {
+        return "Smaller than 5";
+    }
+    else {
+        return "Between 5 and 10";
+    }
+}
+console.log(testElseIf(7));
+//
+function orderMyLogic(val) {
+    var val;
+    if (val < 5) {
+        return "Less than 5";
+    }
+    else if (val < 10) {
+        return "Less than 10";
+    }
+    else {
+        return "Greater than or Equal to 10";
+    }
+}
+console.log(orderMyLogic(5))
+//
+function testSize(num) {
+    if (num < 5) {return "Tiny";}
+    else if (num < 10) {return "Small";}
+    else if (num < 15) {return "Medium";}
+    else if (num < 20) {return "Large";}
+    else {return "Huge";}
+}
+console.log(testSize(7));
+//
 
 
 
