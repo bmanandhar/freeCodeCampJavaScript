@@ -177,7 +177,131 @@ var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];
 var lastName = "Lovelace";
 var secondToLastLetterOfLastName = lastName[lastName.length - 2];
 
-//Above this line pushed to gitHub line #243 
+//Functions
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result = "";
+    result += "My " + myAdjective + " " + myNoun + " " + myVerb + " very " + myAdverb + ".";
+    return result;
+}
+console.log(wordBlanks("dog", "big", "ran", "quickly"));//Expected: My big dog ran very quickly.
+
+var ourArray = ["john", 23];
+var myArray = ["Bill", 14];
+
+var ourArray = [["the universe", 42], ["everything", 101010]];
+var myArray = [[2, "house"], ["dog", "cat"]];
+
+var ourArray = [1, 2, 3];
+var ourData = ourArray[0]; // equals 1 (from above var)
+
+var myArray = [1, 2, 3];
+var myData;
+myData = myArray[0];
+
+var ourData = myArray[0];
+
+var ourArray = [1, 2, 3];
+ourArray[1] = 3; // ourArray now equals [1, 3, 3].
+
+myArray[0] = 3;
+
+var myArray = ["Stimpson", "J", "cat"];
+ourArray.push(["happy", "joy"]);
+//ourArray now equals ["Stimpson", "J", "cat", ["happy", "joy"]]
+
+var myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3]); // myArray now equals [ [ 'John', 23 ], [ 'cat', 2 ], [ 'dog', 3 ] ]
+
+var ourArray = [1, 2, 3];
+var removedFromOurArray = ourArray.pop();
+//removedFromOurArray now equals [1, 2]
+
+var myArray = ["Stimpson", "J", ["cat"]];
+removedFromOurArray = ourArray.shift();
+// removedFromOurArray now equals "Stimpson" and ourArray now equals ["J", ["cat"]]
+
+var myArray = [["John", 23], ["dog", 3]];
+myArray.unshift(["Paul", 35]);
+// myArray now equals [["Paul", 35], "Stimpson", "J", ["cat"]];
+
+var myList = [["Sean", 59], ["Paula", 3], ["canada", 4, "China", 4], ["Patty", 5, "John"], ["Mexico", 8]];
+
+//example
+function ourReusableFunction() {
+    console.log("Heyya, World");
+}
+ourReusableFunction();
+//
+function ourReusableFunction() {
+    console.log("Hi World");
+}
+ourReusableFunction();
+//
+function ourFunctionWithArgs(a, b) {
+    console.log(a - b);
+}
+ourFunctionWithArgs(10, 3); //Outputs 7
+//
+function ourFunctionWithArgs(a, b) {
+    console.log(a + b);
+}
+ourFunctionWithArgs(1, 2); // Outputs 3
+//
+var myGlobal = 10;
+function fun1() {
+    //Assign 5 to oopsGlobal here
+}
+var oopsGlobal = 5;
+function fun2() {
+    var output = "";
+    if (typeof myGlobal != "undefined") {
+        output += "myGlobal: " + myGlobal;
+    }
+    if (typeof oopsGlobal != "undefined") {
+        output += " oopsGlobal: " + oopsGlobal;
+    }
+    console.log(output);
+}
+//
+function myLocalScope() {
+    'use strict';
+    var myVar = 99;
+    console.log(myVar)
+}
+myLocalScope();
+//Run and check the console
+//myVar is not defined outside of myLocalScope
+//Try with and without console.log(myVar)
+
+var outerWear = "T-Shirt";
+function myOutfit() {
+    var outerWear = "Sweater";
+    return outerWear;
+}
+myOutfit();
+//
+function minusSeven(num) {
+    return num - 7;
+}
+//
+function timesFive(num) {
+    return num * 5;
+}
+//
+var changed = 0;
+function change(num) {
+    return (num + 5) / 3;
+}
+changed = change(10)
+//var changed now equals 5 (=(10+5)/3), originally it was 0
+
+var processed = 0;
+function processArg(num) {
+    return (num + 3)/5;
+}
+processed = processArg(7);// var processed now equals 2(=(7+3)/5), originally it was 0
+
+
 
 
 
