@@ -26,7 +26,7 @@ function palindrome(str) {
 console.log(palindrome('My age is 0, 0 si ega ym.'));
 console.log(palindrome('abcdXdcba'));
 
-//longest word
+//length of the longest word
 function findLongestWord(str) {
     var splitWord = [];
     var longest = 0;
@@ -39,3 +39,25 @@ function findLongestWord(str) {
     return longest;
 }
 console.log(findLongestWord('the quick brown fox jumped over the lazy dog'));
+
+//titleCase
+function titleCase(str) {
+    var convertToArray = str.toLowerCase().split(' ');
+    var result = convertToArray.map(function(val){
+        return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+    });
+    return result.join(' ');
+}
+console.log(titleCase("I'm a little tea pot"));
+
+//greatest player number
+function greatestPlayerNumber(x){
+    var greatest = x[0];
+    for (var i = 1; i < x.length; i ++) {
+        if (x[i] > greatest) {
+            greatest = x[i];
+        }
+    }
+    return greatest
+}
+console.log(greatestPlayerNumber([[0, 1, 7, 1],[3, 5, 11, -1],[0, 1, 9, 3]]))
