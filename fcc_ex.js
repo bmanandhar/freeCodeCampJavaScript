@@ -879,23 +879,120 @@ function randomWholeNum() {
     return Math.floor(Math.random() * 10);
 }
 console.log(randomWholeNum());
+//
+function randomRange(ourMin, ourMax) {
+    return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+console.log(randomRange(5, 10));//returns any integer from between 5 ans 10
+//
+var testString = "Ada Lovelace and Charles Babbage designed the first computer and the software that would have run on it.";
 
+var expressionToGetSoftware = /software/gi;
+var softwareCount = testString.match(expressionToGetSoftware).length;
+//
+var testString = "There are 3 cats but 4 dogs.";
+var expression = /\d+/g;
+//
+var digitCount = testString.match(expression).length;
+//
+var expression = /\s+/g;
 
+var spaceString = "How many non-space characters are there in this sentence?";
+var expression = /\S/g;
+var nonSpaceCount = testString.match(expression).length;
+var car = {
+    "wheels": 4,
+    "engines": 1,
+    "seats": 5
+};
 
+var motorBike = {
+    "wheels": 2,
+    "engines": 1,
+    "seats": 2
+}
 
+var Car = function() {
+    this.wheels = 4;
+    this.engines = 1;
+    this.seats = 5;
+};
 
+var MotorBike = function() {
+    this.wheels = 2;
+    this.engines = 1;
+    this.seats = 2;
+};
 
+var myCar = new Car();
+myCar.nickname = "Lambo";
 
+var Car = function(wheels, seats, engines) {
+    this.wheels = wheels;
+    this.seats = seats;
+    this.engines = engines;
+};
 
+//Try it out here
+var myCar = new Car(3, 1, 2);
+//
+var oldArray = [1, 2, 3, 4, 5];
+var addThree = oldArray.map(function(val) {
+    return val + 3;
+});
 
+var newArray = addThree;
+console.log(addThree);
+console.log(oldArray);
+var array = [4, 5, 6, 7, 8];
+var singleVal = 0;
 
+singleVal = array.reduce(function(total, val) {
+    return total + val;
+});
+console.log(singleVal);//=30(=4+5+6+7+8)
 
+var oldArray = [8, 2, 5, 10, 3, 6, 7, 1, 9, 4];
+var newArray = oldArray.filter(function(val) {
+    return val < 6;
+});
+console.log(newArray);
+// returns [ 2, 5, 3, 1, 4 ], values less than 6
+//
+var array = [1, 12, 21, 2];
+array.sort(function(a, b) {
+    return b - a;
+});
+console.log(array);
+//
+var array = [3, 7, 1, 4, 6, 5, 2];
+var newArray = [];
+newArray = array.reverse();
+console.log(newArray);
+//returns [ 2, 5, 6, 4, 1, 7, 3 ]
 
+var oldArray = [3, 2, 5];
+var newArray = [];
+var concatMe = [6, 9, 0];
 
-
-
-
-
+newArray = oldArray.concat(concatMe);
+console.log(newArray);
+// = [ 3, 2, 5, 6, 9, 0 ]
+//
+var string = "split me into an array";
+var array = [];
+array = string.split(" ");
+console.log(array);
+// = [ 'split', 'me', 'into', 'an', 'array' ]
+//
+var joinMe = [ 'join', 'me', 'into', 'a', 'string' ];
+var joinedString = joinMe.join(" ");
+console.log(joinedString);
+// = 'join me into a string'
+//
+if (9 > 4)
+    console.log("this is being printed because 9 is greater than 4!");
+////////////////////////
 function reverseString(str) {
     var strReverse = str.split('').reverse().join('');
     return strReverse;
