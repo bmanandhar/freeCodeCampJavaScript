@@ -730,6 +730,155 @@ function checkObj(checkProp) {
     return "Not Found";
 }
 console.log(checkObj("gift"));
+//
+var myMusic = [
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": ["CS", "8T", "LP"],
+        "gold": true,
+    },
+    //Add receord here
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": ["CS", "8T", "LP"],
+        "gold": true,
+    },
+];
+//
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passanger seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "jack"
+        }
+    }
+};
+var gloveBoxContents = myStorage.car.inside["glove box"];
+//
+var myPlants = [
+    {
+        type: "flowers",
+        list: ["rose", "tulip", "dandelion"]
+    },
+    {
+        type: "trees",
+        list: ["fir", "pine", "birch"]
+    }
+];
+var secondTree = myPlants[1].list[1];
+//outputs "pine", being the value with index [1] of prop list
+//
+var ourArray = [];
+for (var i = 0; i < 5; i++) {
+    ourArray.push(i);
+}
+console.log(ourArray);
+//
+var myArray = [];
+for (var i = 9; i > 0; i -= 2) {
+    myArray.push(i);
+}
+console.log(myArray);
+//outputs all odd values in a decreasing order from 9
+//
+var ourArr = [9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++) {
+    ourTotal += ourArr[i];
+}
+console.log(ourTotal == 42);//(=9+10+11+12)
+//
+var myArr = [2, 3, 4, 5, 6];
+var total = 0;
+for (var i = 0; i <myArr.length; i++) {
+    total += myArr[i];
+}
+console.log(total == 20);//(=2+3+4+5+6)
+//
+function multiplyAll(arr) {
+    var product = 1;
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+        }
+    }
+    return product;
+}
+console.log(multiplyAll([[1,2],[3,4],[5,6,7]]) == 5040);
+//(=1*2*3*4*5*6*7)
+//
+var myArray = [];
+var i = 0;
+while (i < 5) {
+    myArray.push(i);
+    i++;
+}
+console.log(myArray);//outputs [ 0, 1, 2, 3, 4 ]
+//
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Pottery",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["Javascript", "Gaming", "Foxes"]
+    }
+];
+function lookUpProfile(firstName, prop) {
+    for(var i = 0; i < contacts.length; i++) {
+        if(contacts[i].firstName === firstName) {
+            if(contacts[i].hasOwnProperty(prop)) {
+                return contacts[i][prop];
+            }
+            else {
+                return "No such property";
+            }
+        }
+    }
+    return "No such contact";
+}
+console.log(lookUpProfile("Sherlock", "likes"));
+//returns [ 'Intriguing Cases', 'Violin' ]
+
+function randomFraction() {
+    return Math.random();
+}
+console.log(randomFraction());
+//
+function randomNumberBetweenZeroAndInteger(i) {
+    return Math.floor(Math.random() * (i + 1));
+}
+console.log(randomNumberBetweenZeroAndInteger(20));
+//
+function randomWholeNum() {
+    return Math.floor(Math.random() * 10);
+}
+console.log(randomWholeNum());
 
 
 
@@ -738,12 +887,19 @@ console.log(checkObj("gift"));
 
 
 
-//Below this line already pushed to gitHub
-//reverse the given string
+
+
+
+
+
+
+
+
+
 function reverseString(str) {
     var strReverse = str.split('').reverse().join('');
     return strReverse;
-}
+};
 
 console.log(reverseString('hello') == 'olleh');//expected 'true'
 
