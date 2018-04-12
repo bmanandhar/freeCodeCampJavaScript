@@ -582,7 +582,74 @@ function chainToSwitch(val) {
     return answer;
 }
 console.log(chainToSwitch(7));
-
+//
+function isLess(a, b) {
+    return a < b;
+}
+console.log(isLess(10, 15))
+//
+function abTest(a, b) {
+    if (a < 0 || b < 0) {
+        return undefined;
+    }
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+console.log(abTest(2, 3));
+//
+var count = 0;
+function cardCount(card) {
+    switch(card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count += 1;
+            break;
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+            count -= 1;
+            break;
+    }
+    if (count > 0) {
+        return count + " Bet";
+    }
+    else {
+        return count + " Hold";
+    }
+}
+console.log(cardCount(2), cardCount(3), cardCount(7), cardCount("K"), cardCount("A"));
+//
+var ourDog = {
+    "name": "Molly",
+    "legs": 4,
+    "tails": 1,
+    "friends":["other", "people"]
+};
+//
+var testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+var hatValue = testObj.hat
+console.log(hatValue);
+console.log(testObj["hat"] == hatValue);// expected true
+console.log(testObj["hat"] == testObj.hat)// please note equality between test["hat"] and testObj.hat
+//
+var testObj = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water"
+};
+var entreeValue = testObj["an entree"];
+console.log(entreeValue);
+var drinkValue = testObj["the drink"];
+console.log(drinkValue)
+//
 
 
 
