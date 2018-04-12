@@ -650,6 +650,90 @@ console.log(entreeValue);
 var drinkValue = testObj["the drink"];
 console.log(drinkValue)
 //
+var testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+};
+var playerNumber = 16;
+var player = testObj[playerNumber];
+//
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"]
+};
+ourDog.name = "Happy Camper"; // this will change the "name" into "Happy Camper" as new key
+console.log(ourDog);// here everything remains the same except "name"
+//
+var myDog = {
+    "name": "coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Free Code Camp Campers"]
+};
+myDog.name = "Happy " + myDog.name;
+//
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"]
+};
+ourDog.bark = "bow-wow";// this will add one more prop "bark" with value "bow-wow"
+console.log(ourDog);
+//
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"],
+    "bark": "bow-wow"
+};
+delete ourDog.bark; //this will delete the prop and value of ourDog.bark
+//
+var myDog = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Free Code Camp Campers"],
+    "bark": "woof"
+};
+delete myDog.tails;
+//
+function phoneticLookup(val) {
+    var result = "";
+    var lookup = {
+        "alpha": "Adams",
+        "bravo": "Boston",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "Easy",
+        "foxtrot": "Frank"
+    };
+    result = lookup[val];
+    return result;
+}
+console.log(phoneticLookup("charlie") == "Chicago");
+//
+var myObj = {
+    gift: "pony",
+    pet: "kitten",
+    bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+    if (myObj.hasOwnProperty(checkProp)) {
+        return myObj[checkProp];
+    };//If true return the prop
+    return "Not Found";
+}
+console.log(checkObj("gift"));
+
+
+
+
 
 
 
